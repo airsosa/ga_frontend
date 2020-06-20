@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //import './App.css';
@@ -11,6 +11,7 @@ import Products from "./components/products";
 import Services from "./components/services";
 import Team from "./components/team";
 import Contact from "./components/contact";
+import Admin from "./components/admin";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/services" component={Services} />
         <Route path="/our-team" component={Team} />
         <Route path="/contact-us" component={Contact} />
+        <Route path="/admin" component={Admin} />
       </div>
     </Router>
   );
