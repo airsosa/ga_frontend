@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class CreateContent extends Component {
   constructor(props) {
@@ -31,7 +32,9 @@ export default class CreateContent extends Component {
       image: this.state.image
     }
 
-    console.log(content);
+    axios.post('http://localhost:5000/api/content/create', content)
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err));
   }
 
   onChangeTitle(e) {
